@@ -13,7 +13,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaPinterestSquare } from "react-icons/fa";
-import styles from "./index.css"
 
 const Content = () => {
   return (
