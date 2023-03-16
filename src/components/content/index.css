@@ -1,0 +1,12 @@
+.container_icon {
+    margin: 20px;
+}
+
+.container_icon:hover {
+    color: #fff;
+}
+
+.social {
+    font-size: 3rem;
+    transition: .3s
+}

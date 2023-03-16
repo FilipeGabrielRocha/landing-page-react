@@ -1,15 +1,11 @@
 import { Menu } from "../components/menu";
-import { Hero } from "../components/hero";
-import { About } from "../components/about";
-// import { Services } from "../components/services";
+import { Content } from "../components/content";
 
 const Home = () => {
   return (
     <>
       <Menu />
-      <Hero />
-      <About />
-      {/* <Services /> */}
+      <Content />
     </>
   );
 };

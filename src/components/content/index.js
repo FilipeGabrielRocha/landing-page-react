@@ -8,10 +8,19 @@ import tomatoes from "../../assets/image/tomatoes.jpg";
 import landscape from "../../assets/image/landscape.jpg";
 import plants from "../../assets/image/plants.jpg";
 import flowers from "../../assets/image/flowers.jpg";
+import lemons from "../../assets/image/lemons.jpg";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaPinterestSquare } from "react-icons/fa";
+import styles from "./index.css"
 
-const About = () => {
+const Content = () => {
   return (
     <Section>
+      <DivLemons>
+        <H2>We make cool things</H2>
+      </DivLemons>
       <Itens>
         <Iten>
           <H3>Title</H3>
@@ -84,9 +93,62 @@ const About = () => {
           </Link>
         </div>
       </ContainerProjetos>
+      <Foooter>
+        <H4>Agência XYZ</H4>
+        <Nav>
+          <Ul>
+            <li>
+              <Link>
+                <A2 href="/">About</A2>
+              </Link>
+            </li>
+            <li>
+              <Link>
+                <A2 href="/">Services</A2>
+              </Link>
+            </li>
+            <li>
+              <Link>
+                <A2 href="/">Projects</A2>
+              </Link>
+            </li>
+          </Ul>
+        </Nav>
+        <div>
+          <Link className="container_icon">
+            <FaFacebookSquare className="social" />
+          </Link>
+          <Link className="container_icon">
+            <FaInstagram className="social" />
+          </Link>
+          <Link className="container_icon">
+            <FaTwitterSquare className="social" />
+          </Link>
+          <Link className="container_icon">
+            <FaPinterestSquare className="social" />
+          </Link>
+        </div>
+      </Foooter>
     </Section>
   );
 };
+
+// HERO
+
+const DivLemons = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 89vh;
+  background: url(${lemons}) center center no-repeat;
+  background-size: cover;
+`;
+
+const H2 = styled.h2`
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 4rem;
+`;
 
 // ABOUT
 
@@ -138,10 +200,8 @@ const A = styled.a`
 
 // SERVICES
 
-const ContainerBolinhas = styled.section`
+const ContainerBolinhas = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 `;
 const Servico = styled.div`
@@ -181,6 +241,45 @@ const ContainerProjetos = styled.div`
 const Projetos = styled.img`
   width: 100%;
   height: 100%;
+
+  :hover {
+    opacity: .8;
+  }
 `;
 
-export { About };
+// FOOTER
+
+const Foooter = styled.footer`
+  display: flex;
+  background-color: lightgreen;
+  flex-direction: column;
+  text-align: center;
+  padding: 100px 0px;
+`;
+const H4 = styled.h4`
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+`;
+const Nav = styled.nav`
+  margin: 50px 0;
+`;
+const Ul = styled.ul`
+  display: flex;
+  justify-content: center;
+  max-width: 320px;
+  margin: 0 auto;
+`;
+const A2 = styled.a`
+font-weight: 500;
+font-size: 2rem;
+margin 20px;
+transition: .3s;
+
+:hover {
+  font-weight: 700;
+  color: #fff;
+}
+`;
+
+export { Content };
